@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Detalles de la Canción
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      {{ song.title }}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>{{songId}}</ion-label>
+        <ion-input [(ngModel)]="song.artist"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Álbum</ion-label>
+        <ion-input [(ngModel)]="song.album"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Duración</ion-label>
+        <ion-input [(ngModel)]="song.duration"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="block" (click)="updateSong()">Guardar cambios</ion-button>
+</ion-content>
